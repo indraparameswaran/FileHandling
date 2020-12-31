@@ -12,5 +12,12 @@ public class App
     {
         System.out.println( "step 1 : creating the file");
         CreateFile.createFileUsingFileClass();
+        
+        System.out.println( "step 2 : writing to the file");
+        WriteFile.writeFileUsingFileWriter();
+        
+        
     }
+    
+    
 }
