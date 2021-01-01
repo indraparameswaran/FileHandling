@@ -23,15 +23,24 @@ public class App
         WriteFile.writeFileUsingFileWriter();
         
         System.out.println( "step 3 : reading from the file");
-        List list = ReadFile.readFileUsingList(Constants.peopleRecordsPath);
+        readContentsFromFile();
         
-        Iterator<String> itr = list.iterator();
-        while(itr.hasNext()) {
-        	System.out.println(itr.next());
-        }
+        System.out.println( "step 4 : Appending to the file");
+        AppendFile.appendFileUsingBufferedWriter();
         
+        System.out.println( "step 5 : reading from the file after appending");
+        readContentsFromFile();    
         
     }
+
+	public static void readContentsFromFile() {
+		List list = ReadFile.readFileUsingList(Constants.peopleRecordsPath);        
+          
+        Iterator<String> itr = list.iterator();
+        while(itr.hasNext()) {
+        	System.out.println(itr.next());       	
+        }
+	}
     
     
 }

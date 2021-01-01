@@ -14,7 +14,7 @@ public class WriteFile {
 	try {
 		FileWriter writer = new FileWriter(file);
 		writer.write("Writing the first line to the file\n");
-		writer.write("Writing the second line to the file\n");
+		writer.write("Writing the second line to the file");
 		writer.close();		
 	} catch(IOException e){
 		e.printStackTrace();
