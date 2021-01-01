@@ -1,13 +1,15 @@
-package com.hcl.FileHandling;
+package com.hcl.filehandling;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import com.hcl.util.Constants;
+
 public class WriteFile {
 	
 	public static void writeFileUsingFileWriter() throws IOException {
-		File file = new File("C:\\Users\\indrakumari.param\\eclipse-workspace\\FileHandling\\src\\main\\resources\\testFile01.txt");
+		File file = new File(Constants.peopleRecordsPath);
 		
 	try {
 		FileWriter writer = new FileWriter(file);
